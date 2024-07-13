@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import CustomInput from "./CustomInput";
 import { useRouter } from "next/navigation";
+import { signIn, signUp } from "@/lib/actions/user.actions";
 
 const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
@@ -32,15 +33,15 @@ const AuthForm = ({ type }: { type: string }) => {
       setIsLoading(true);
       //Signup with appwrite and create plaid token
       if (type === "sign-in") {
-        //   const newUser = await signUp(data);
-        //   setUser(newUser)
+        // const newUser = await signUp(data);
+        // setUser(newUser)
       } else {
         // const response = await signIn({
         //   email: data.email,
         //   password: data.password,
         // });
-        //   if (response) {
-        // router.push("/");
+        // if (response) {
+        //   router.push("/");
         // }
       }
     } catch (error) {
